@@ -8,3 +8,31 @@ video {
   left: 0;
   bottom: 0;
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  gap: 2rem;
+  z-index: 2;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0 20px;
+  height: fit-content;
+}
+
+li {
+  height:fit-content;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+li.active {
+  color: rgb(237, 52, 219) !important;
+}
