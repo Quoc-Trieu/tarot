@@ -36,19 +36,24 @@ function App() {
   const active = headerNav.findIndex(e => e.path === pathname || e.subPath === pathname);
   return (
     <div id="app">
-      <ul className="navbar">
-        {
-          headerNav.map((item, index) => (
-            <li key={index} className={active == index ? 'active' : ''}>
-              <Link to={item.path}>{item.display}</Link>
-            </li>
-          ))
-        }
-      </ul>
+      {
+        pathname != '/' ?
+          <ul className="navbar">
+            {
+              headerNav.map((item, index) => (
+                <li key={index} className={active == index ? 'active' : ''}>
+                  <Link to={item.path}>{item.display}</Link>
+                </li>
+              ))
+            }
+          </ul>
+          : ''
+      }
+
       <video src={bgVideo} autoPlay loop muted />
-      {/* <audio autoPlay loop>
-          <source src={audio} type="audio/ogg" />
-        </audio> */}
+      <audio autoPlay loop>
+        <source src={audio} type="audio/ogg" />
+      </audio>
 
       <Routes>
         <Route path='/' element={<Home />} />
