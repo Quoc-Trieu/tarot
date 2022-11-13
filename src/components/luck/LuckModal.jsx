@@ -17,13 +17,12 @@ const ModalLove = styled.div`
         background: rgba(239, 219, 239, 0.5);
         z-index: 2;
         display: flex;
-        justify-content: center;
-        gap: 4rem;
         position: relative;
+        width: 90%;
+        gap: 3rem;
     `
 const BoxContent = styled.div`
-        min-width: 800px;
-        max-width: 1000px;
+        flex: 1;
         display: flex;
         flex-direction: column;
         gap: 1rem;
